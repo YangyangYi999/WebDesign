@@ -1,0 +1,99 @@
+Last login: Fri Nov 17 16:26:35 on ttys002
+➜  ~ npm i -g typescript
+/usr/local/bin/tsc -> /usr/local/lib/node_modules/typescript/bin/tsc
+/usr/local/bin/tsserver -> /usr/local/lib/node_modules/typescript/bin/tsserver
++ typescript@2.6.1
+updated 1 package in 1.374s
+➜  ~ tsc
+Version 2.6.1
+Syntax:   tsc [options] [file ...]
+
+Examples: tsc hello.ts
+          tsc --outFile file.js file.ts
+          tsc @args.txt
+
+Options:
+ -h, --help                                         Print this message.
+ --all                                              Show all compiler options.
+ -v, --version                                      Print the compiler's version.
+ --init                                             Initializes a TypeScript project and creates a tsconfig.json file.
+ -p FILE OR DIRECTORY, --project FILE OR DIRECTORY  Compile the project given the path to its configuration file, or to a folder with a 'tsconfig.json'.
+ --pretty                                           Stylize errors and messages using color and context (experimental).
+ -w, --watch                                        Watch input files.
+ -t VERSION, --target VERSION                       Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'.
+ -m KIND, --module KIND                             Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'.
+ --lib                                              Specify library files to be included in the compilation: 
+                                                      'es5' 'es6' 'es2015' 'es7' 'es2016' 'es2017' 'esnext' 'dom' 'dom.iterable' 'webworker' 'scripthost' 'es2015.core' 'es2015.collection' 'es2015.generator' 'es2015.iterable' 'es2015.promise' 'es2015.proxy' 'es2015.reflect' 'es2015.symbol' 'es2015.symbol.wellknown' 'es2016.array.include' 'es2017.object' 'es2017.sharedmemory' 'es2017.string' 'es2017.intl' 'esnext.asynciterable' 
+ --allowJs                                          Allow javascript files to be compiled.
+ --jsx KIND                                         Specify JSX code generation: 'preserve', 'react-native', or 'react'.
+ -d, --declaration                                  Generates corresponding '.d.ts' file.
+ --sourceMap                                        Generates corresponding '.map' file.
+ --outFile FILE                                     Concatenate and emit output to single file.
+ --outDir DIRECTORY                                 Redirect output structure to the directory.
+ --removeComments                                   Do not emit comments to output.
+ --noEmit                                           Do not emit outputs.
+ --strict                                           Enable all strict type-checking options.
+ --noImplicitAny                                    Raise error on expressions and declarations with an implied 'any' type.
+ --strictNullChecks                                 Enable strict null checks.
+ --strictFunctionTypes                              Enable strict checking of function types.
+ --noImplicitThis                                   Raise error on 'this' expressions with an implied 'any' type.
+ --alwaysStrict                                     Parse in strict mode and emit "use strict" for each source file.
+ --noUnusedLocals                                   Report errors on unused locals.
+ --noUnusedParameters                               Report errors on unused parameters.
+ --noImplicitReturns                                Report error when not all code paths in function return a value.
+ --noFallthroughCasesInSwitch                       Report errors for fallthrough cases in switch statement.
+ --types                                            Type declaration files to be included in compilation.
+ @<file>                                            Insert command line options and files from a file.
+➜  ~ npm i -g lite-server
+npm WARN deprecated express@2.5.11: express 2.x series is deprecated
+npm WARN deprecated connect@1.9.2: connect 1.x series is deprecated
+/usr/local/bin/lite-server -> /usr/local/lib/node_modules/lite-server/bin/lite-server
+
+> fsevents@1.1.3 install /usr/local/lib/node_modules/lite-server/node_modules/fsevents
+> node install
+
+[fsevents] Success: "/usr/local/lib/node_modules/lite-server/node_modules/fsevents/lib/binding/Release/node-v57-darwin-x64/fse.node" already installed
+Pass --update-binary to reinstall or --build-from-source to recompile
++ lite-server@2.3.0
+added 418 packages in 14.519s
+➜  ~ cd Web_Design_Workspace 
+➜  Web_Design_Workspace mkdir todo
+➜  Web_Design_Workspace cd t
+cd: no such file or directory: t
+➜  Web_Design_Workspace         cd todo 
+➜  todo code .
+➜  todo codec.
+zsh: command not found: codec.
+➜  todo code . 
+➜  todo code .
+➜  todo cd ..
+➜  Web_Design_Workspace cd ..
+➜  ~ cd Documents 
+➜  Documents cd GitHub/Extra\ Credit 
+➜  Extra Credit cd extra-credit-assignment1-abhinnankit 
+➜  extra-credit-assignment1-abhinnankit git:(master) ✗ vim .gitignore 
+
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+../.DS_Store
+Thumbs.db
