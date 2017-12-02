@@ -1,3 +1,43 @@
-<p>
-  cart works!
-</p>
+<div class="container-fluid">
+  <h1 id="title" >My Cart</h1>
+<div class="row">
+<div class="cart-left" class="col-sm-8">
+<table class="table">
+   <thead>
+       <tr>
+           <th>ProductId</th>
+           <th>ProductName</th>
+           <th>Quantity</th>
+           <th>Price</th>
+           <th>TotalPrice</th>
+           <th>Delete</th>
+       </tr>
+   </thead>
+   <tbody>
+       <tr ng-repeat="item in cart">
+           <td>{{item.id}}</td>
+           <td>{{item.name}}</td>
+           <td>
+               <button type="button" ng-click="reduce(item.id)" class="btn btn-primary">-</button>
+               <input type="text" value="{{item.quantity}}" ng-model="item.quantity" />
+               <button type="button" ng-click="add(item.id)" class="btn btn-primary">+</button>
+           </td>
+           <td>{{item.price}}</td>
+           <td>{{item.price*item.quantity}}</td>
+           <td>
+               <button type="button" ng-click="remove(item.id)" class="btn btn-danger">Remove</button>
+           </td>
+       </tr>
+       <tr>
+           <td>Total </td>
+           <td>{{totalPrice()}}</td>
+       </tr>
+   </tbody>
+</table>
+</div>
+<div class="cart-right" class="col-sm-4" >
+<input type="button" value="Update" class="col">
+<input type="button" value="checkout" class="col">
+</div>
+</div>
+</div>
