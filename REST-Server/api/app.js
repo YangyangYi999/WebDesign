@@ -1,7 +1,7 @@
 'use strict';
 module.exports = function(app) {
-  let giftedModel = require('./models/gifted');
+  let accountModel = require('./models/account');
 
-  let giftedRoutes = require('./routes/gifted-route');
-  giftedRoutes(app);
+  let accountdRoutes = require('./routes/account-route');
+  accountRoutes(app);
 };
