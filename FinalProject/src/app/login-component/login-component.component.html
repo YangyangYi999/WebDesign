@@ -1,73 +1,123 @@
-<div class="container">
-  <div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <div class="panel panel-login">
-      <div class="panel-heading">
-        <div class="row">
-          <div class="col-xs-6">
-            <a href="#" class="active" id="login-form-link">Login</a>
-          </div>
-          <div class="col-xs-6">
-            <a href="#" id="register-form-link">Register</a>
-          </div>
-        </div>
-        <hr>
+<!-- Button trigger modal -->
+
+<div class="container"> 
+  <hr class="prettyline">
+  
+<button class="btn btn-primary btn-lg" href="#signup" data-toggle="modal" data-target=".bs-modal-sm">Sign In/Register</button>
+  <br>
+  <hr class="prettyline">
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-sm">
+  <div class="modal-content">
+      <br>
+      <div class="bs-example bs-example-tabs" id="lg">
+          <ul id="myTab" class="nav nav-tabs">
+            <li class="nav-item" ><a class="nav-link active" aria-selected="true" href="#signin" data-toggle="tab">Sign In</a></li>
+            <li class="nav-item"><a class="nav-link" href="#signup" data-toggle="tab">Register</a></li>
+          </ul>
       </div>
-      <div class="panel-body">
-        <div class="row">
-          <div class="col-lg-12">
-            <form id="login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display: block;">
-              <div class="form-group">
-                <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
-              </div>
-              <div class="form-group">
-                <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
-              </div>
-              <div class="form-group text-center">
-                <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
-                <label for="remember"> Remember Me</label>
-              </div>
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-sm-6 col-sm-offset-3">
-                    <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-lg-12">
-                    <div class="text-center">
-                      <a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
-            <form id="register-form" action="https://phpoll.com/register/process" method="post" role="form" style="display: none;">
-              <div class="form-group">
-                <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
-              </div>
-              <div class="form-group">
-                <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
-              </div>
-              <div class="form-group">
-                <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
-              </div>
-              <div class="form-group">
-                <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
-              </div>
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-sm-6 col-sm-offset-3">
-                    <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
-                  </div>
-                </div>
-              </div>
-            </form>
+    <div class="modal-body">
+      <div id="myTabContent" class="tab-content">
+      
+      <div class="tab-pane fade show active" id="signin">
+          <form class="form-horizontal">
+          <fieldset>
+          <!-- Sign In Form -->
+          <!-- Text input-->
+          <div class="control-group">
+            <label class="control-label" for="username">Username:</label>
+            <div class="controls">
+              <input required="" id="username" name="username" type="text" class="form-control" placeholder="username" class="input-medium" required="">
+            </div>
           </div>
-        </div>
+
+          <!-- Password input-->
+          <div class="control-group">
+            <label class="control-label" for="passwordinput">Password:</label>
+            <div class="controls">
+              <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
+            </div>
+          </div>
+
+          <!-- Multiple Checkboxes (inline) -->
+          <div class="control-group">
+            <label class="control-label" for="rememberme"></label>
+            <div class="controls">
+              <label class="checkbox inline" for="rememberme-0">
+                <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">
+                Remember me
+              </label>
+            </div>
+          </div>
+
+          <!-- Button -->
+          <div class="control-group">
+            <label class="control-label" for="signin"></label>
+            <div class="controls">
+              <button id="signin" name="signin" class="btn btn-success" type="submit">Sign In</button>
+            </div>
+          </div>
+          </fieldset>
+          </form>
       </div>
+      <div class="tab-pane fade" id="signup">
+          <form class="form-horizontal">
+          <fieldset>
+          <!-- Sign Up Form -->
+          <!-- Text input-->
+          <div class="control-group">
+            <label class="control-label" for="Email">Email:</label>
+            <div class="controls">
+              <input id="Email" name="Email" class="form-control" type="email" placeholder="name @mail.com" class="input-large" required="">
+            </div>
+          </div>
+          
+          <!-- Text input-->
+          <div class="control-group">
+            <label class="control-label" for="userid">Username:</label>
+            <div class="controls">
+              <input id="userid" name="userid" class="form-control" type="text" placeholder="username" class="input-large" required="">
+            </div>
+          </div>
+          
+          <!-- Password input-->
+          <div class="control-group">
+            <label class="control-label" for="password">Password:</label>
+            <div class="controls">
+              <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required>
+            </div>
+          </div>
+          
+          <!-- Text input-->
+          <div class="control-group">
+            <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
+            <div class="controls">
+              <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
+            </div>
+          </div>
+          
+          
+          
+          <!-- Button -->
+          <div class="control-group">
+            <label class="control-label" for="confirmsignup"></label>
+            <div class="controls">
+              <button id="confirmsignup" name="confirmsignup" type="submit" class="btn btn-success">Sign Up</button>
+            </div>
+          </div>
+          </fieldset>
+          </form>
+    </div>
+  </div>
+    </div>
+    <div class="modal-footer">
+   
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    
     </div>
   </div>
 </div>
