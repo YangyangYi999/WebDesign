@@ -4,7 +4,7 @@ let express = require('express'),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser');
 
-mongoose.connect('mongodb://localhost/stickDB', { userMongoClient: true });
+mongoose.connect('mongodb://localhost/accountDB', { userMongoClient: true });
 mongoose.Promise = global.Promise;
 
 app.use(bodyParser.urlencoded({extended: true}));
