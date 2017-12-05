@@ -1,5 +1,52 @@
-.contaier-fluid{
+#title{
     text-align: center;
+    color:#FFF;
     background-color: black;
-    color:white;
+}
+.image{
+    margin-top: 30px;
+    margin-left: 35p;
+    margin-left: 35px;
+    border: 1px solid black;
+    width: 200px;
+    height: 300px;
+
+}
+.detail{
+    margin-left:30px;
+    margin-top:30px;
+    .prod-name{
+     font-size: 40px;
+     font-weight: 600;
+ 
+    }
+    .prod-price{
+     font-size:30px;
+     font-weight: 500;
+     font-style: italic;
+    }
+    .prod-descrip{
+     font-size:25px;
+     font-weight: 300;
+     font-style:italic;
+    }
+    .quantity{
+        margin-top:20px;
+    }
+    .btn-favorite{
+        margin-left:20px;
+        color:#fff;
+        background-color:black;
+        border-radius: 70%;
+    }
+    .btn-submit{
+        margin-top:20px;
+        color:#fff;
+        width:500px;
+        height:50px;
+        background: black;
+        text-align: center;
+        font-weight: 600;
+        font-size:20px;
+    }
 }

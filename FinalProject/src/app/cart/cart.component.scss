@@ -21,7 +21,7 @@ th {
     margin-left: auto;
 }
 
-.btn-update{
+.btn-update,.btn-checkout{
     color:#fff;
     background: black;
     text-align: center;
@@ -29,7 +29,4 @@ th {
     font-size:20px;
     margin-top:15px;
 
-}
-.btn-checkout{
-    @extend.btn-update
 }

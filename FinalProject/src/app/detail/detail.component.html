@@ -1,34 +1,35 @@
 <div class="container-fluid">
   <h1 id="title" >View Product</h1>
 <div class="row">
-   <div class="Image" class="col-sm-6">
+   <div class="image col-sm-5">
     
    </div>
-   <div class="datail col-sm-6">
+   <div class="detail col-sm-5">
      <article class="produc-info">
-       <div class="prod-name-wrap">
-         <h1 class="prod-name"></h1>
+       <div class="prod-name col-sm-7">
+         <p class="name">Product</p>
        </div>
-       <div class="prod-price">
-       <h2 id="price"></h2>
+       <div class="prod-price col-sm-3">
+       <p class="price">$</p>
       </div>
      </article>
      <article class="descrip">
        <div class ="prod-descrip">
-         <h4></h4>
+        product description
        </div>
      </article>
      <article>
      <form id="mainform">
        <div class="qty">
-         <a class="down" field="quantity"></a>
-         <input min="1" type="text" name="quantity" class="quantity" value="1">
-        <a class="up" field="quantity"></a>     
+          <button type="button" ng-click="reduce(item.id)" class="btn">-</button>
+          <input type="number" max="100" style="width:30px;" class="quantity" value="1"> 
+          <button type="button" ng-click="add(item.id)" class="btn ">+</button> 
+          <button type="button" class="btn-favorite" >
+              Favorite
+          </button>
        </div>
-        <input type="submit" name="button"  value="Add to Bag">
-        <input type="button" name="" value="Add to list">
+        <input type="submit" name="button" class="btn-submit" value="Add to Bag">
      </form>
-       
     </article>   
    </div>
 </div>

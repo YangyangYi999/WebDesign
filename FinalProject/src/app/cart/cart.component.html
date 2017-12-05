@@ -18,7 +18,9 @@
            <td>{{item.id}}</td>
            <td>{{item.name}}</td>
            <td>
-               <input type="number" max="100" style="width:30px;" value="{{item.quantity}}" ng-model="item.quantity" />
+               <button type="button" ng-click="reduce(item.id)" class="btn ">-</button>
+               <input type="number" value="1"max="100" style="width:30px;" value="{{item.quantity}}" ng-model="item.quantity" />
+               <button type="button" ng-click="add(item.id)" class="btn ">+</button>
            </td>
            <td>{{item.price}}</td>
            <td>{{item.price*item.quantity}}</td>
