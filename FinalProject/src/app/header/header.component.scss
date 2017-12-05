@@ -1,43 +1,160 @@
+
 header {
-  padding-top: 5px;
+
+
   background-color: rgba(255, 255, 255, 0.7);
+
+
   nav {
-    padding-left: 35px;
-    font-size: 12px;
-    .hidden-md-down {
-      display: none;
-    }
+
+    font-size: 14px;
+    width: 100%;
     .nav-link {
       &:hover {
         border-bottom: 1px solid lightgray;
       }
     }
+
+    // Navbar button
+
+    button {
+      border: none;
+      cursor: pointer;
+      div {
+        display: flex;
+        flex-direction: column;
+      }
+      .bar1, .bar2, .bar3 {
+        width: 25px;
+        height: 2px;
+        background-color: #333;
+        margin: 3px 0;
+        transition: 0.4s;
+      }
+      .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+      }
+      .change .bar2 {opacity: 0;}
+      .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+      }
+    }
   }
 
+
+  //Hide elements inside menu in small screen
+
+
+  .hide-sm-link {
+    display: none;
+  }
+
+  .hide-sm-img {
+    display: none;
+  }
+
+
+  // Right sides elements
+
   .navbar-right {
+    .navbar-nav {
+      width: 100%;
+      li {
+        width: 100%;
+      }
+    }
+    display: flex;
     a {
       span {
         vertical-align: middle;
+        span {
+          vertical-align: initial;
+        }
       }
       img {
         width: 25px;
-        margin-left: 15px;
+        margin-left: 8px;
       }
-    }
-  }
-  .brand-image {
-    align-self: center;
-    .navbar-brand {
-      width: 100%;
-      height: 80px;
     }
   }
 
-  @media screen and (min-width: 1120px) {
-    nav {
-      .hidden-md-down {
-        display: block;
+
+  // Brand Image
+
+
+  .brand-image {
+    display: none;
+    justify-content: center;
+  }
+
+
+
+
+  //Small navbar styles
+
+
+
+  .small-navbar-right {
+    display: flex;
+    a {
+      img {
+        width: 15px;
+        height: 20px;
+      }
+      & > span {
+        margin-left: 2px;
+      }
+      display: block;
+      padding: 10px;
+    }
+  }
+
+  .navbar-brand {
+    height: 50px;
+  }
+
+  .smallscreen-brand {
+    margin-right: 0;
+  }
+
+  // Media queries here
+
+
+  @media screen and (min-width: 768px) {
+    .brand-image {
+      display: flex;
+      .navbar-brand {
+        height: 100px;
+      }
+    }
+    .navbar-right {
+      .navbar-nav {
+        width: auto;
+        li {
+          width: auto;
+        }
+      }
+    }
+    .hide-sm-link {
+      display: block;
+    }
+    .hide-sm-img {
+      display:  initial;
+    }
+    .smallscreen-brand {
+      display: none;
+    }
+    .small-navbar-right {
+      display: none;
+    }
+    .navbar-toggler button {
+      div {
+        display: none !important;
       }
     }
   }
+
+
 }

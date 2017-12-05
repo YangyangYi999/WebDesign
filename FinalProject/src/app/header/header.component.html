@@ -1,20 +1,55 @@
 <header class="sticky-top">
-  <div class="container-fluid">
-    <div class="row">
-      <nav class="nav flex-column flex-sm-row align-items-center col-md-5">
-        <a href="" class="nav-link text-dark text-uppercase">SHOP</a>
-        <a href="" class="nav-link text-dark text-uppercase">BEST SELLERS</a>
-        <a href="" class="nav-link text-dark text-uppercase">NEW ARRIVALS</a>
-        <a href="" class="nav-link text-dark text-uppercase hidden-md-down">ABOUT US</a>
-      </nav>
-      <div class="brand-image col-md-2">
-        <a href=""><img class="navbar-brand" src="../../assets/images/brand-logo.jpg" alt="Shop4All"></a>
-      </div>
-      <nav class="nav align-items-center col-md-5 justify-content-end navbar-right">
-        <a href="" class="nav-link text-uppercase text-secondary"><span>MY ACCOUNT</span><img src="../../assets/images/icon-account.svg"></a>
-        <a href="" class="nav-link text-uppercase text-secondary"><span>SEARCH</span><img src="../../assets/images/icon-search.svg"></a>
-        <a href="" class="nav-link text-uppercase text-secondary"><span>BAG(<span class="cart-count">0</span>)</span><img src="../../assets/images/icon-bag.svg" alt=""></a>
-      </nav>
-    </div>
-  </div>
+  <div class="globalnav">
+    <div class="container-fluid">
+      <div class="row">
+        <!--<div class="add-full-height full-height">-->
+
+        <div class="brand-image col-12 m-auto">
+          <a href=""><img class="navbar-brand" src="../../assets/images/brand-logo.jpg" alt="Shop4All"></a>
+        </div>
+        <nav class="navbar navbar-expand-md navbar-light sticky-top">
+          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainNavbar"
+                  aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <div>
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+              </div>
+          </button>
+          <a href=""><img class="navbar-brand smallscreen-brand" src="../../assets/images/brand-logo.jpg"
+                          alt="Shop4All"></a>
+          <div class="small-navbar-right">
+            <a href=""><img src="../../assets/images/icon-search-m.svg"></a>
+            <a href=""><img src="../../assets/images/icon-bag-m.svg"><span class="text-secondary">(<span class="cart-count">0</span>)</span></a>
+          </div>
+          <div class="navbar-collapse collapse" id="mainNavbar">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link text-uppercase text-center text-sm-left" href="#">Shop <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase text-center text-sm-left" href="#">New Arrivals</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase text-center text-sm-left" href="#">Best Sellers</a>
+              </li>
+            </ul>
+            <div class="navbar-right">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a href="" class="nav-link text-uppercase text-center text-sm-left"><span>MY ACCOUNT</span><img class="hide-sm-img"
+                  src="../../assets/images/icon-account.svg"></a></li>
+                <li class="nav-item"><a href="" class="nav-link text-uppercase hide-sm-link"><span>SEARCH</span><img
+                  src="../../assets/images/icon-search.svg"></a></li>
+                <li class="nav-item"><a href="" class="nav-link text-uppercase hide-sm-link"><span>BAG(<span
+                  class="cart-count">0</span>)</span><img src="../../assets/images/icon-bag.svg" alt=""></a></li>
+              </ul>
+            </div><!-- navbar-right -->
+          </div><!-- mainNavbar -->
+        </nav>
+      </div><!-- row -->
+
+    </div><!-- container-fluid -->
+  </div><!-- globalnav -->
+  <!--</div>-->
 </header>
+
