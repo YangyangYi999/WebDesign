@@ -1,52 +1,48 @@
-#title{
-    text-align: center;
-    color:#FFF;
-    background-color: black;
-}
-.image{
-    margin-top: 30px;
-    margin-left: 35p;
-    margin-left: 35px;
-    border: 1px solid black;
-    width: 200px;
-    height: 300px;
+body {
+    font-family: 'open sans';
+    overflow-x: hidden; }
+  
+  img {
+    max-width: 100%; }
+  .tab-content {
+    overflow: hidden; }
+  
+  .card {
+    margin-top: 50px;
+    background: #eee;
+    padding: 3em;
+    line-height: 1.5em; }
+    .add-to-cart, .like {
+      padding: 1.2em 1.5em;
+      border: none;
+      text-transform: UPPERCASE;
+      font-weight: bold;
+      color: #fff;
+     }
+    .add-to-cart:hover, .like:hover {
+        background:firebrick;
+        color: #fff; }
+     .product-size,.product-qty,.action{
+        margin-top:10px;
+        }
+ @media screen and (max-width: 996px) {
+      .preview {
+        margin-bottom: 20px; } }
+  
+  @media screen and (min-width: 997px) {
 
-}
-.detail{
-    margin-left:30px;
-    margin-top:30px;
-    .prod-name{
-     font-size: 40px;
-     font-weight: 600;
- 
+  
+  .product-title, .price {
+    text-transform: UPPERCASE;
+    font-weight: bold; }
+  
+
+  .product-title, .product-description {
+    margin-bottom: 15px; }
+  
+  .product-title {
+    margin-top: 0; }
+
     }
-    .prod-price{
-     font-size:30px;
-     font-weight: 500;
-     font-style: italic;
-    }
-    .prod-descrip{
-     font-size:25px;
-     font-weight: 300;
-     font-style:italic;
-    }
-    .quantity{
-        margin-top:20px;
-    }
-    .btn-favorite{
-        margin-left:20px;
-        color:#fff;
-        background-color:black;
-        border-radius: 70%;
-    }
-    .btn-submit{
-        margin-top:20px;
-        color:#fff;
-        width:500px;
-        height:50px;
-        background: black;
-        text-align: center;
-        font-weight: 600;
-        font-size:20px;
-    }
-}
+  
+  

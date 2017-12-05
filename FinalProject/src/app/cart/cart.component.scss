@@ -1,32 +1,39 @@
-#title{
-    text-align: center;
-    background-color: black;
-    color:white;
+.pro-name{
+ padding-left: 1.5em;
+ margin-top:1.5em;
+ margin-left:2em;
 }
-th {
-    text-align: center;
+.table>tbody>tr>td, .table>tfoot>tr>td{
+    vertical-align: middle;
 }
-.btn-remove{
-    line-height: 10px;
-    display: block;
-    width: 35px;
-    height: 35px;
-    color: #fff;
-    border-radius: 100%;
-    background: #5e0231;
-    font-weight: 900;
-    font-size: 20px;
-    margin: 0;
-    margin-right: 0;
-    margin-left: auto;
+@media screen and (max-width: 780px) {
+    table#cart tbody td .form-control{
+		width:20%;
+		display: inline !important;
+	}
+	.actions .btn{
+		width:36%;
+		margin:1.5em 0;
+	}
+	
+	.actions .btn-info{
+		float:left;
+	}
+	.actions .btn-danger{
+		float:right;
+	}
+	
+	table#cart thead { display: none; }
+	table#cart tbody td { display: block; padding: .6rem; min-width:320px;}
+	table#cart tbody tr td:first-child { background: #333; color: #fff; }
+	table#cart tbody td:before {
+		content: attr(data-th); font-weight: bold;
+		display: inline-block; width: 8rem;
+	}
+	
+	table#cart tfoot td{display:block; }
+	table#cart tfoot td .btn{display:block;}
+	
 }
 
-.btn-update,.btn-checkout{
-    color:#fff;
-    background: black;
-    text-align: center;
-    font-weight: 600;
-    font-size:20px;
-    margin-top:15px;
 
-}
