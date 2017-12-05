@@ -1,11 +1,11 @@
 <div class="container-fluid">
   <h1 id="title" >My Cart</h1>
 <div class="row">
-<div class="cart-left col-sm-8">
+<div class="cart-left col-sm-8 ">
 <table class="table">
    <thead>
        <tr>
-           <th>ProductId</th>
+           <th>ProductId </th>
            <th>ProductName</th>
            <th>Quantity</th>
            <th>Price</th>
@@ -18,26 +18,24 @@
            <td>{{item.id}}</td>
            <td>{{item.name}}</td>
            <td>
-               <button type="button" ng-click="reduce(item.id)" class="btn btn-primary">-</button>
-               <input type="text" value="{{item.quantity}}" ng-model="item.quantity" />
-               <button type="button" ng-click="add(item.id)" class="btn btn-primary">+</button>
+               <input type="number" max="100" style="width:30px;" value="{{item.quantity}}" ng-model="item.quantity" />
            </td>
            <td>{{item.price}}</td>
            <td>{{item.price*item.quantity}}</td>
            <td>
-               <button type="button" ng-click="remove(item.id)" class="btn btn-danger">Remove</button>
+               <button type="button"  ng-click="remove(item.id)" class="btn btn-remove">×</button>
            </td>
-       </tr>
-       <tr>
-           <td>Total </td>
-           <td>{{totalPrice()}}</td>
        </tr>
    </tbody>
 </table>
 </div>
-<div class="cart-right col-sm-4" >
-<input type="button" value="Update" class="col">
-<input type="button" value="checkout" class="col">
+<div class="cart-right col-sm-4 " >
+  <h2 id="cart-subtotal">Subtotal${{totalPrice()}}USD</h2>
+  <input type="button" value="UPDATE" class="col btn-update">
+ <input type="button" value="CHECKOUT" class="col btn-checkout">
+  <h5>Don’t forget! Free shipping for US over $30 and free shipping over $50 for international. </h5>
+  <u>Contitue shopping!</u> 
 </div>
+
 </div>
 </div>

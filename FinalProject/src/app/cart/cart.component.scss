@@ -1,0 +1,35 @@
+#title{
+    text-align: center;
+    background-color: black;
+    color:white;
+}
+th {
+    text-align: center;
+}
+.btn-remove{
+    line-height: 10px;
+    display: block;
+    width: 35px;
+    height: 35px;
+    color: #fff;
+    border-radius: 100%;
+    background: #5e0231;
+    font-weight: 900;
+    font-size: 20px;
+    margin: 0;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.btn-update{
+    color:#fff;
+    background: black;
+    text-align: center;
+    font-weight: 600;
+    font-size:20px;
+    margin-top:15px;
+
+}
+.btn-checkout{
+    @extend.btn-update
+}
