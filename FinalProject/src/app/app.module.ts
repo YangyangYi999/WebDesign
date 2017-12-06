@@ -11,7 +11,7 @@ import { HomeComponentComponent } from './home-component/home-component.componen
 import { ItemComponentComponent } from './item-component/item-component.component';
 import { OrdersComponentComponent } from './orders-component/orders-component.component';
 import { CheckoutComponentComponent } from './checkout-component/checkout-component.component';
-
+import { MyShopAppComponent } from './my-shop-app/my-shop-app.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { CheckoutComponentComponent } from './checkout-component/checkout-compon
     HomeComponentComponent,
     ItemComponentComponent,
     OrdersComponentComponent,
-    CheckoutComponentComponent
+    CheckoutComponentComponent,
+    MyShopAppComponent
   ],
   imports: [
     BrowserModule
