@@ -1,15 +1,47 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, AfterViewInit {
 
+  @ViewChild('searchBar', {read: ElementRef}) searchBar: ElementRef;
+  @ViewChild('btnSmallNav', {read: ElementRef}) btnSmallNav: ElementRef;
+  @ViewChild('mainNavbar', {read: ElementRef}) mainNavBar: ElementRef;
+  @ViewChild('searchBarBtn', {read: ElementRef}) searchBarBtn: ElementRef;
+  @ViewChild('searchBarInput', {read: ElementRef}) searchBarInput: ElementRef;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit(): void {
+  }
+
+  btnAnimation = false;
+  searchBarVisible = true;
+  borderBottom = false;
+
+  changeBorder() {
+    this.borderBottom = !this.borderBottom;
+  }
+
+  borderBottomStyle() {
+    const styles = {
+      'border-bottom': '1px solid #80bdff'
+    };
+    if ( this.borderBottom )
+    return styles;
+  }
+
+  showSearchBar() {
+    this.searchBarVisible = !this.searchBarVisible;
+  }
+
+  onClickBtn() {
+    this.btnAnimation = !this.btnAnimation;
   }
 
 }

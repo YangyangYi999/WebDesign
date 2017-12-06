@@ -1,3 +1,9 @@
+%border-bottom {
+  border: none;
+  border-bottom: 1px solid lightgray;
+}
+
+
 
 header {
 
@@ -14,6 +20,13 @@ header {
         border-bottom: 1px solid lightgray;
       }
     }
+
+
+    .navbar-collapse {
+      margin-top: 10px;
+    }
+
+
 
     // Navbar button
 
@@ -32,17 +45,16 @@ header {
         transition: 0.4s;
       }
       .change .bar1 {
-        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-        transform: rotate(-45deg) translate(-9px, 6px);
+        -webkit-transform: rotate(-45deg) translate(-7px, 6px);
+        transform: rotate(-45deg) translate(-7px, 6px);
       }
       .change .bar2 {opacity: 0;}
       .change .bar3 {
-        -webkit-transform: rotate(45deg) translate(-8px, -8px);
-        transform: rotate(45deg) translate(-8px, -8px);
+        -webkit-transform: rotate(45deg) translate(-5px, -5px);
+        transform: rotate(45deg) translate(-5px, -5px);
       }
     }
   }
-
 
   //Hide elements inside menu in small screen
 
@@ -67,6 +79,7 @@ header {
     }
     display: flex;
     a {
+      cursor: pointer;
       span {
         vertical-align: middle;
         span {
@@ -76,6 +89,32 @@ header {
       img {
         width: 25px;
         margin-left: 8px;
+      }
+    }
+  }
+
+  .search-navbar {
+    display: flex;
+    padding: 5px;
+    background-color: whitesmoke;
+    > form {
+      justify-content: flex-end;
+      flex-wrap: nowrap;
+      .form-control {
+        &:focus {
+          box-shadow: none;
+        }
+      }
+      > input {
+        flex-grow: 1;
+        background-color: transparent;
+        @extend %border-bottom;
+      }
+      > button {
+        height: 100%;
+        background-color: rgba(255,255,255,0);
+        border-bottom: 1px solid lightgray;
+        @extend %border-bottom;
       }
     }
   }
@@ -90,8 +129,6 @@ header {
   }
 
 
-
-
   //Small navbar styles
 
 
@@ -99,6 +136,7 @@ header {
   .small-navbar-right {
     display: flex;
     a {
+      cursor: pointer;
       img {
         width: 15px;
         height: 20px;
@@ -109,7 +147,12 @@ header {
       display: block;
       padding: 10px;
     }
+    &:last-child {
+      text-decoration: none;
+    }
   }
+
+
 
   .navbar-brand {
     height: 50px;
@@ -117,16 +160,24 @@ header {
 
   .smallscreen-brand {
     margin-right: 0;
+    margin-left: 20px;
   }
+
 
   // Media queries here
 
 
   @media screen and (min-width: 768px) {
+    .navbar-collapse {
+      margin-top: 0px !important;
+    }
     .brand-image {
       display: flex;
       .navbar-brand {
-        height: 100px;
+        height: 150px;
+        width: 250px;
+        margin-top: 20px;
+        margin-bottom: 20px;
       }
     }
     .navbar-right {
@@ -154,7 +205,19 @@ header {
         display: none !important;
       }
     }
+    .search-navbar {
+      display: flex;
+      padding: 10px;
+      > form {
+        flex-wrap: nowrap;
+        > button {
+          height: 100%;
+        }
+        > input {
+          width: 18rem;
+          flex-grow: unset;
+        }
+      }
+    }
   }
-
-
 }
