@@ -93,10 +93,19 @@ header {
     }
   }
 
+  .dropdown-menu {
+    margin-top: 0;
+  }
+
+  .dropdown-item {
+    text-align: center;
+    font-size: 13px;
+  }
+
   .search-navbar {
     display: flex;
     padding: 5px;
-    background-color: whitesmoke;
+    background-color: rgba(245,245,245,0.6);
     > form {
       justify-content: flex-end;
       flex-wrap: nowrap;
@@ -141,7 +150,7 @@ header {
         width: 15px;
         height: 20px;
       }
-      & > span {
+      > span {
         margin-left: 2px;
       }
       display: block;
@@ -218,6 +227,9 @@ header {
           flex-grow: unset;
         }
       }
+    }
+    .dropdown-item {
+        text-align: left;
     }
   }
 }

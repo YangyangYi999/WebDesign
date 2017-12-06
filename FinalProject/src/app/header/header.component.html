@@ -24,10 +24,15 @@
           </div>
           <div class="navbar-collapse collapse" id="mainNavbar" #mainNavBar>
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="nav-link text-uppercase text-center text-md-left" href="#">Shop <span class="sr-only">(current)</span></a>
+              <li class="nav-item dropdown mr-md-3 ml-md-2">
+                <a class="nav-link text-uppercase text-center text-md-left" href="#" id="dropdown-shop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop <span class="sr-only">(current)</span></a>
+                <div class="dropdown-menu" aria-labelledby="dropdown-shop">
+                  <a class="dropdown-item text-secondary text-uppercase" href="#">Women's</a>
+                  <a class="dropdown-item text-secondary text-uppercase" href="#">Men's</a>
+                  <a class="dropdown-item text-secondary text-uppercase" href="#">Kids</a>
+                </div>
               </li>
-              <li class="nav-item">
+              <li class="nav-item mr-md-3">
                 <a class="nav-link text-uppercase text-center text-md-left" href="#">New Arrivals</a>
               </li>
               <li class="nav-item">
@@ -47,7 +52,7 @@
           </div><!-- mainNavbar -->
         </nav>
         <div class="search-navbar col-12" #searchBar
-        [ngClass]="{'d-none': searchBarVisible}">
+        *ngIf="searchBarVisible">
           <form class="form-inline my-2 my-lg-0 col-12">
             <input class="form-control" type="search" placeholder="Search" aria-label="Search" (focus)="changeBorder()" (focusout)="changeBorder()" [ngStyle]="borderBottomStyle()">
             <button class="navbar-form-button" type="submit" #searchBarBtn [ngStyle]="borderBottomStyle()"><i class="fa fa-search text-secondary" aria-hidden="true"></i></button>

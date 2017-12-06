@@ -7,9 +7,8 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('searchBar', {read: ElementRef}) searchBar: ElementRef;
-  @ViewChild('btnSmallNav', {read: ElementRef}) btnSmallNav: ElementRef;
-  @ViewChild('mainNavbar', {read: ElementRef}) mainNavBar: ElementRef;
+
+
   @ViewChild('searchBarBtn', {read: ElementRef}) searchBarBtn: ElementRef;
   @ViewChild('searchBarInput', {read: ElementRef}) searchBarInput: ElementRef;
   constructor() { }
@@ -20,8 +19,11 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
   }
 
+  // noinspection TsLint
   btnAnimation = false;
-  searchBarVisible = true;
+  // noinspection TsLint
+  searchBarVisible = false;
+  // noinspection TsLint
   borderBottom = false;
 
   changeBorder() {
@@ -32,6 +34,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     const styles = {
       'border-bottom': '1px solid #80bdff'
     };
+    // noinspection TsLint
     if ( this.borderBottom )
     return styles;
   }
