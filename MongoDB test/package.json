@@ -1,0 +1,19 @@
+{
+  "name": "product",
+  "version": "1.0.0",
+  "description": "product",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "product"
+  ],
+  "author": "Yidi",
+  "license": "ISC",
+  "dependencies": {
+    "connect": "^3.6.5",
+    "mocha": "^4.0.1",
+    "mongoose": "^4.13.6"
+  }
+}
