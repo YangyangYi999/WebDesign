@@ -12,6 +12,7 @@ import { ItemComponentComponent } from './item-component/item-component.componen
 import { OrdersComponentComponent } from './orders-component/orders-component.component';
 import { CheckoutComponentComponent } from './checkout-component/checkout-component.component';
 import { MyShopAppComponent } from './my-shop-app/my-shop-app.component';
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MyShopAppComponent } from './my-shop-app/my-shop-app.component';
     ItemComponentComponent,
     OrdersComponentComponent,
     CheckoutComponentComponent,
-    MyShopAppComponent
+    MyShopAppComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule
