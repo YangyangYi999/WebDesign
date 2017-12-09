@@ -8,6 +8,13 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose'),
     app = express();
 
+// Initialize Routes
+
+var appRoutes = require('./routes/app');
+
+
+// Mongoose parameters
+
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost:27017/giftedDB', {useMongoClient: true});
 
@@ -19,6 +26,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -29,7 +37,7 @@ app.use(function (req, res, next) {
 
 // Set Routes
 
-
+app.use('/',appRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
