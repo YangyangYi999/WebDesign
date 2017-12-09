@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 before(function(done){
-    mongoose.connect('mongodb://localhost/demoDB',{
+    mongoose.connect('mongodb://localhost/Final',{
         useMongoClient: true
     });
     mongoose.connection.once('open',function(){
