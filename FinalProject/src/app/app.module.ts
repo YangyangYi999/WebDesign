@@ -13,6 +13,9 @@ import { OrdersComponentComponent } from './orders-component/orders-component.co
 import { CheckoutComponentComponent } from './checkout-component/checkout-component.component';
 import { MyShopAppComponent } from './my-shop-app/my-shop-app.component';
 import { FilterComponent } from './filter/filter.component';
+import { PaymentComponent } from './payment/payment.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,10 +30,12 @@ import { FilterComponent } from './filter/filter.component';
     OrdersComponentComponent,
     CheckoutComponentComponent,
     MyShopAppComponent,
-    FilterComponent
+    FilterComponent,
+    PaymentComponent,
+    PageNotFoundComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,FormsModule,ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
