@@ -1,0 +1,48 @@
+<div class="container-fluid">
+  <div class="collectionfilers" data-chilren=".filters" >
+    <h3 data-toggle="collapse" data-parent="#collectionfilers" href="#filters" aria-expanded="true" >
+      <i class="fa fa-sliders" aria-hidden="true"></i>
+      FILTER</h3>
+  </div>
+  <hr>
+  <div id="filters"  data-children=".item">
+      <div class="item">
+        <a data-toggle="collapse" class="font-weight-bold text-dark"data-parent="#filters" href="#name" aria-expanded="false" >
+           NAME
+        </a>
+        <hr>
+        <div id="name" class="collapse show" role="tabpanel">
+      <ol >
+      <li ><input type="checkbox" class="name-ascending"><span class="font-italic">  A to Z</span></li>
+      <li><input type="checkbox" class="name-descending"><span class="font-italic" >  Z to A</span></li>  
+    </ol>
+        </div>
+      </div>
+      <div class="item">
+        <a data-toggle="collapse" class="font-weight-bold text-dark" data-parent="#filters" href="#rate" aria-controls="rate" aria-expanded="false" >
+          RATE
+        </a>
+        <hr>
+        <div id="rate" class="collapse" role="tabpanel">
+          <ol>
+         <li><input type="checkbox" class="5"><span class="font-italic">  5 Stars</span></li>
+         <li><input type="checkbox" class="4"><span class="font-italic">  4 Stars</span></li>
+         <li><input type="checkbox" class="3"><span class="font-italic">  3 Stars</span></li>
+         <li><input type="checkbox" class="2"><span class="font-italic">  2 Stars</span></li>   
+         <li><input type="checkbox" class="1"><span class="font-italic">  1 Star</span></li>
+        </ol>
+        </div>
+      </div>
+      <div class="item">
+          <a data-toggle="collapse" class="font-weight-bold text-dark" data-parent="#filters" href="#price" aria-expanded="false" >
+            PRICE
+          </a>
+          <div id="price" class="collapse" role="tabpanel">
+            <ol>
+            <li ><input type="checkbox" class="price-ascending"><span class="font-italic">  Low to High</span></li>
+            <li ><input type="checkbox" class="price-descending"><span class="font-italic">  High to Low</span></li>
+            </ol>
+          </div>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,5 @@
+import { URL } from 'url';
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -7,7 +9,8 @@ const ProductSchema = new Schema({
     price: Number,
     description: String,
     type: String,
-    rate:Number  
+    rate:Number,
+    image: String
 });
 
 const Product = mongoose.model('product',ProductSchema);
