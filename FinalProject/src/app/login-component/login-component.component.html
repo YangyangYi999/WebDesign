@@ -1,123 +1,56 @@
-<!-- Button trigger modal -->
+<div class="container">
+  <h2 class="myaccount">My Account</h2>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Sign in</h3>
 
-<div class="container"> 
-  <hr class="prettyline">
-  
-<button class="btn btn-primary btn-lg" href="#signup" data-toggle="modal" data-target=".bs-modal-sm">Sign In/Register</button>
-  <br>
-</div>
-
-
-<!-- Modal -->
-<div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-<div class="modal-dialog modal-sm">
-  <div class="modal-content">
-      <br>
-      <div class="bs-example bs-example-tabs" id="lg">
-          <ul id="myTab" class="nav nav-tabs">
-            <li class="nav-item" ><a class="nav-link active" aria-selected="true" href="#signin" data-toggle="tab">Sign In</a></li>
-            <li class="nav-item"><a class="nav-link" href="#signup" data-toggle="tab">Register</a></li>
-          </ul>
+      <div class="col-sm-10">
+        <hr/>
+        <form [formGroup]="SigninForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="signinInputEmail">Email address</label>
+            <input type="email" class="form-control" id="signinInputEmail" formControlName="email" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="signinInputPassword">Password</label>
+            <input type="password" class="form-control" id="signinInputPassword" formControlName="password" placeholder="Password">
+          </div>
+          <div class="center">
+            <button type="submit" class="btn btn-primary btn-lg btn-block" [disabled]="!SigninForm.valid">Sign in</button>
+          </div>
+        </form>
       </div>
-    <div class="modal-body">
-      <div id="myTabContent" class="tab-content">
-      
-      <div class="tab-pane fade show active" id="signin">
-          <form class="form-horizontal">
-          <fieldset>
-          <!-- Sign In Form -->
-          <!-- Text input-->
-          <div class="control-group">
-            <label class="control-label" for="username">Username:</label>
-            <div class="controls">
-              <input required="" id="username" name="username" type="text" class="form-control" placeholder="username" class="input-medium" required="">
-            </div>
-          </div>
-
-          <!-- Password input-->
-          <div class="control-group">
-            <label class="control-label" for="passwordinput">Password:</label>
-            <div class="controls">
-              <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
-            </div>
-          </div>
-
-          <!-- Multiple Checkboxes (inline) -->
-          <div class="control-group">
-            <label class="control-label" for="rememberme"></label>
-            <div class="controls">
-              <label class="checkbox inline" for="rememberme-0">
-                <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">
-                Remember me
-              </label>
-            </div>
-          </div>
-
-          <!-- Button -->
-          <div class="control-group">
-            <label class="control-label" for="signin"></label>
-            <div class="controls">
-              <button id="signin" name="signin" class="btn btn-success btn-login" type="submit">Sign In</button>
-            </div>
-          </div>
-          </fieldset>
-          </form>
-      </div>
-      <div class="tab-pane fade" id="signup">
-          <form class="form-horizontal">
-          <fieldset>
-          <!-- Sign Up Form -->
-          <!-- Text input-->
-          <div class="control-group">
-            <label class="control-label" for="Email">Email:</label>
-            <div class="controls">
-              <input id="Email" name="Email" class="form-control" type="email" placeholder="name @mail.com" class="input-large" required="">
-            </div>
-          </div>
-          
-          <!-- Text input-->
-          <div class="control-group">
-            <label class="control-label" for="userid">Username:</label>
-            <div class="controls">
-              <input id="userid" name="userid" class="form-control" type="text" placeholder="username" class="input-large" required="">
-            </div>
-          </div>
-          
-          <!-- Password input-->
-          <div class="control-group">
-            <label class="control-label" for="password">Password:</label>
-            <div class="controls">
-              <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required>
-            </div>
-          </div>
-          
-          <!-- Text input-->
-          <div class="control-group">
-            <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
-            <div class="controls">
-              <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
-            </div>
-          </div>
-          
-          
-          
-          <!-- Button -->
-          <div class="control-group">
-            <label class="control-label" for="confirmsignup"></label>
-            <div class="controls">
-              <button id="confirmsignup " name="confirmsignup" type="submit" class="btn btn-success">Sign Up</button>
-            </div>
-          </div>
-          </fieldset>
-          </form>
     </div>
+
+    <div class="col-sm-6">
+      <h3>Register</h3>
+      <hr/>
+      <form [formGroup]="RegisterForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <label for="registerInputfname">First name</label>
+              <input type="text" class="form-control" placeholder="First name" formControlName="firstName">
+            </div>
+            <div class="col">
+              <label for="registerInputlname">Last name</label>
+              <input type="text" class="form-control" placeholder="Last name" formControlName="lastName">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="signinInputEmail">Email address</label>
+          <input type="email" class="form-control" id="signinInputEmail" aria-describedby="emailHelp" placeholder="Enter email" formControlName="emailRegister">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="signinInputPassword">Password</label>
+          <input type="password" class="form-control" id="signinInputPassword" placeholder="Password" formControlName="passwordRegister">
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-block" [disabled]="!RegisterForm.valid">Register</button>
+      </form>
+    </div>
+
   </div>
-    </div>
-    <div class="modal-footer">
-   
-      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-    
-    </div>
-  </div>
-</div>
 </div>
