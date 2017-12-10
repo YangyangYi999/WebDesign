@@ -9,6 +9,11 @@ let bodyParser = require('body-parser');
 let mongoose = require('mongoose'),
     app = express();
 
+// Mongoose parameters
+
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost:27017/giftedDB', {useMongoClient: true});
+
 // Initialize Models
 
 let productModel = require('./models/product'),
@@ -16,17 +21,10 @@ let productModel = require('./models/product'),
     userModel = require('./models/user');
 
 
-
 // Initialize Routes
 
 let productRoutes = require('./routes/product');
 let appRoutes = require('./routes/app');
-
-
-// Mongoose parameters
-
-mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/giftedDB', {useMongoClient: true});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

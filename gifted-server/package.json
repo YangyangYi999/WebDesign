@@ -21,6 +21,7 @@
     "serve-favicon": "^2.4.5"
   },
   "devDependencies": {
+    "moment": "^2.19.3",
     "nodemon": "^1.12.5"
   }
 }
