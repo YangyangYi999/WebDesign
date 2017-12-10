@@ -2,7 +2,6 @@
 
 const mongoose = require('mongoose');
 let Schema = mongoose.Schema;
-let order = mongoose.model('Order');
 let mongooseUniqueValidator = require('mongoose-unique-validator');
 
 let userSchema = new Schema({
@@ -25,8 +24,12 @@ let userSchema = new Schema({
     orderList: [{
         orderID: {
             type: Schema.Types.ObjectId,
-            ref: 'order'
+            ref: 'Order'
         }
+    }],
+    cart: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Product'
     }]
 });
 

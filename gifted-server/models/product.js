@@ -2,7 +2,6 @@
 
 const mongoose = require('mongoose');
 let Schema = mongoose.Schema;
-let item = mongoose.model('Item');
 let mongooseUniqueValidator = require('mongoose-unique-validator');
 
 let productSchema = new Schema({
@@ -31,7 +30,23 @@ let productSchema = new Schema({
         type: String,
     },
     itemList: [{
-        type: item
+        size: {
+            s: Number,
+            m: Number,
+            l: Number,
+            xl: Number
+        },
+        color: [{
+            url: String,
+            type: String
+        }],
+        price: [{
+            s: Number,
+            m: Number,
+            l: Number,
+            xl: Number
+        }]
+
     }]
 });
 
