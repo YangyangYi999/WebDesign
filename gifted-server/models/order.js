@@ -3,12 +3,12 @@
 const mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 let mongooseUniqueValidator = require('mongoose-unique-validator');
-let product = mongoose.model('Product');
 
 let orderSchema = new Schema({
     orderID: {type: String, required: true, unique: true},
     productList: [{
-        type: product,
+        type: Schema.Types.ObjectId,
+        ref: 'Product',
         required: true
     }],
     // user: {type: Schema.Types.ObjectId, ref:'User'},

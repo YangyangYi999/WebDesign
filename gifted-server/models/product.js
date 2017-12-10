@@ -2,15 +2,10 @@
 
 const mongoose = require('mongoose');
 let Schema = mongoose.Schema;
-let item = mongoose.model('Item');
 let mongooseUniqueValidator = require('mongoose-unique-validator');
+let moment = require('moment');
 
 let productSchema = new Schema({
-    id: {
-        type: String,
-        required: true,
-        unique: true
-    },
     name: {
         type: String,
         required: true
@@ -20,21 +15,38 @@ let productSchema = new Schema({
         required: true
     },
     addedTime: {
-        type: String,
+        type: Date,
         required: true
     },
     type: {
         type: String,
         required: true
     },
-    rate: {
-        type: String,
+    rating: {
+        type: Number,
     },
-    itemList: [{
-        type: Schema.Types.ObjectId, ref: 'item'
-    }]
+    itemList: {
+        size: {
+            s: Number,
+            m: Number,
+            l: Number,
+            xl: Number
+        },
+        color: [{
+            url: String,
+            name: String
+        }],
+        price: {
+            s: Number,
+            m: Number,
+            l: Number,
+            xl: Number
+        }
+    }
 });
 
 productSchema.plugin(mongooseUniqueValidator);
 
-module.exports = mongoose.model('Product', productSchema);
+let ProductModel = mongoose.model('Product', productSchema);
+
+module.exports = ProductModel;

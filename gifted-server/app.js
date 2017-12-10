@@ -1,22 +1,30 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+'use strict';
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+let bodyParser = require('body-parser');
 
-var mongoose = require('mongoose'),
+let mongoose = require('mongoose'),
     app = express();
-
-// Initialize Routes
-
-var appRoutes = require('./routes/app');
-
 
 // Mongoose parameters
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost:27017/giftedDB', {useMongoClient: true});
+
+// Initialize Models
+
+let productModel = require('./models/product'),
+    orderModel = require('./models/order'),
+    userModel = require('./models/user');
+
+
+// Initialize Routes
+
+let productRoutes = require('./routes/product');
+let appRoutes = require('./routes/app');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -37,11 +45,12 @@ app.use(function (req, res, next) {
 
 // Set Routes
 
-app.use('/',appRoutes);
+app.use('/products', productRoutes);
+app.use('/', appRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-    var err = new Error('Not Found');
+    let err = new Error('Not Found');
     err.status = 404;
     next(err);
 });
