@@ -3,30 +3,20 @@
   border-bottom: 1px solid lightgray;
 }
 
-
-
 header {
-
-
   background-color: rgba(255, 255, 255, 0.7);
-
-
   nav {
-
     font-size: 14px;
     width: 100%;
+    border-bottom: 1px solid lightgray;
     .nav-link {
       &:hover {
         border-bottom: 1px solid lightgray;
       }
     }
-
-
     .navbar-collapse {
       margin-top: 10px;
     }
-
-
 
     // Navbar button
 
@@ -129,15 +119,6 @@ header {
   }
 
 
-  // Brand Image
-
-
-  .brand-image {
-    display: none;
-    justify-content: center;
-  }
-
-
   //Small navbar styles
 
 
@@ -230,6 +211,26 @@ header {
     }
     .dropdown-item {
         text-align: left;
+    }
+  }
+}
+
+// Brand Image
+
+
+.brand-image {
+  display: none;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .brand-image {
+    display: flex;
+    .navbar-brand {
+      height: 150px;
+      width: 250px;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
   }
 }

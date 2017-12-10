@@ -1,0 +1,84 @@
+<div class="container-fluid">
+  <div class="panel-heading text-center">
+    <h4 class="panel-title">
+      <p class="text-uppercase text-danger font-weight-bold mt-5">
+        Payment Information
+      </p>
+    </h4>
+  </div>
+  <div class="panel-body col-md-8 d-flex flex-column m-auto">
+    <p class="font-italic ml-3 ">What method would you like to pay with today?</p>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+
+        <label class="col-sm-3 control-label font-weight-bold" for="card-holder-name">Name on Card
+        </label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" stripe-data="name" id="name-on-card" placeholder="Card Holder's Name" formControlName="holderName">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label font-weight-bold" for="card-number">Card Number
+        </label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" stripe-data="number" id="card-number" placeholder="Debit/Credit Card Number" formControlName="cardNumber">
+          <br/>
+          <div>
+            <img class="pull-right" src="https://s3.amazonaws.com/hiresnetwork/imgs/cc.png" style="max-width: 250px; padding-bottom: 20px;">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label font-weight-bold" for="expiry-month">Expiration Date
+          </label>
+          <div class="col-sm-9">
+            <div class="row">
+              <div class="col-xs-3">
+                <select class="form-control ml-3" data-stripe="exp-month" id="card-exp-month">
+                  <option>Month</option>
+                  <option value="01">Jan (01)</option>
+                  <option value="02">Feb (02)</option>
+                  <option value="03">Mar (03)</option>
+                  <option value="04">Apr (04)</option>
+                  <option value="05">May (05)</option>
+                  <option value="06">June (06)</option>
+                  <option value="07">July (07)</option>
+                  <option value="08">Aug (08)</option>
+                  <option value="09">Sep (09)</option>
+                  <option value="10">Oct (10)</option>
+                  <option value="11">Nov (11)</option>
+                  <option value="12">Dec (12)</option>
+                </select>
+              </div>
+              <div class="col-xs-3 ml-3">
+                <select class="form-control " data-stripe="exp-year" id="card-exp-year" style="margin-left:10px;">
+                  <option value="2016">2016</option>
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label font-weight-bold" for="cvv">Card CVV</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" stripe-data="cvv" id="card-cvv" placeholder="Security Code" formControlName="cvv">
+          </div>
+          <button type="submit" class="btn btn-success btn-lg col-md-5 mt-4 ml-3"[disabled]="!myForm.valid" style="width:100%;">Pay Now
+          </button>
+          <br/>
+          <div class="font-italic ml-3">
+            <br/> By submiting this order you are agreeing to our billing agreement, and terms of service. If you have any questions
+            about our products or services please contact us before placing this order.
+          </div>
+        </div>
+      </div>
+     </form> 
+  </div>
+</div>
