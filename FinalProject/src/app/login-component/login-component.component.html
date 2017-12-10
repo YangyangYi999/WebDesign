@@ -51,7 +51,9 @@
           <label for="signinInputPassword">Password</label>
           <input type="password" class="form-control" id="signinInputPassword" placeholder="Password" formControlName="passwordRegister">
         </div>
+        <a [routerLink]="['../email']">
         <button type="submit" class="btn btn-primary btn-lg btn-block" [disabled]="!RegisterForm.valid">Register</button>
+        </a>
       </form>
     </div>
 

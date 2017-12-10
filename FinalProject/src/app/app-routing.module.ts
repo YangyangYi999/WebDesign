@@ -11,6 +11,7 @@ import {OrdersComponentComponent} from './orders-component/orders-component.comp
 import {ViewOrderComponent} from './view-order/view-order.component'
 import {CheckoutComponentComponent} from './checkout-component/checkout-component.component'
 import {PaymentComponent} from './payment/payment.component'
+import { AccountComponent } from './account-component/account-component.component';
 
 const appRoutes: Routes = [
     { path: '', 
@@ -44,7 +45,11 @@ const appRoutes: Routes = [
         { 
           // path: '/:email', 
           path: 'email',
-          component: OrdersComponentComponent,
+          component: AccountComponent,
+        },
+        {
+          path: 'orders',
+          component: OrdersComponentComponent
         },
         { 
           // path: '/:orderID',

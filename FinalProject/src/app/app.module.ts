@@ -20,6 +20,7 @@ import { FilterComponent } from './filter/filter.component';
 import { PaymentComponent } from './payment/payment.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AccountComponent } from './account-component/account-component.component';
 
 
 
@@ -39,7 +40,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MyShopAppComponent,
     FilterComponent,
     PaymentComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AccountComponent
   ],
 
   imports: [
