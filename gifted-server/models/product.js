@@ -31,7 +31,7 @@ let productSchema = new Schema({
         type: String,
     },
     itemList: [{
-        type: item
+        type: Schema.Types.ObjectId, ref: 'item'
     }]
 });
 

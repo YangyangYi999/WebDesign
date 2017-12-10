@@ -1,11 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-<<<<<<< HEAD
+import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
-=======
->>>>>>> master
+import { ProductService} from './services/product.service'
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -45,16 +43,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
 
   imports: [
-<<<<<<< HEAD
-    BrowserModule,
-    AppRoutingModule
-=======
     BrowserModule, 
     FormsModule, 
-    ReactiveFormsModule
->>>>>>> master
+    ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

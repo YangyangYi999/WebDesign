@@ -6,7 +6,6 @@ export class UserAccount {
         public password: string,
         public firstName?: string,
         public lastName?: string,
-        public cart?: Array<Product>,
         public orderList?: Array<string>) {}
 }    
         
