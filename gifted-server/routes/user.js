@@ -55,4 +55,8 @@ router.post('/signin', function (req, res, next) {
     });
 });
 
+router.patch('/cart', function (req, res, next) {
+    
+});
+
 module.exports = router;

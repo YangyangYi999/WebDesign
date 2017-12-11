@@ -50,9 +50,9 @@
                   <img class="hide-sm-img" src="../../assets/images/icon-account.svg">
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdown-user">
-                  <a class="dropdown-item text-secondary text-uppercase" [routerLink]="['account/orders']">My Orders</a>
-                  <a class="dropdown-item text-secondary text-uppercase" [routerLink]="['account/login']">Login</a>
-                  <a class="dropdown-item text-secondary text-uppercase">Logout</a>
+                  <a class="dropdown-item text-secondary text-uppercase" *ngIf="isLoggedIn()" [routerLink]="['account/orders']">My Orders</a>
+                  <a class="dropdown-item text-secondary text-uppercase" *ngIf="!isLoggedIn()" [routerLink]="['account/login']">Login</a>
+                  <a class="dropdown-item text-secondary text-uppercase" *ngIf="isLoggedIn()" (click)="onLogout()">Logout</a>
                 </div>
               </li>
               <li class="nav-item" (click)="showSearchBar()"><a class="nav-link text-uppercase hide-sm-link"><span>SEARCH</span><img
