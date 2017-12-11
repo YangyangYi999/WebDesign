@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,11 +7,8 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-
-
-  @ViewChild('searchBarBtn', {read: ElementRef}) searchBarBtn: ElementRef;
-  @ViewChild('searchBarInput', {read: ElementRef}) searchBarInput: ElementRef;
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
@@ -32,8 +29,8 @@ export class HeaderComponent implements OnInit {
       'border-bottom': '1px solid #80bdff'
     };
     // noinspection TsLint
-    if ( this.borderBottom )
-    return styles;
+    if (this.borderBottom)
+      return styles;
   }
 
   showSearchBar() {

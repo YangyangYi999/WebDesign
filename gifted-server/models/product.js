@@ -3,7 +3,6 @@
 const mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 let mongooseUniqueValidator = require('mongoose-unique-validator');
-let moment = require('moment');
 
 let productSchema = new Schema({
     name: {
