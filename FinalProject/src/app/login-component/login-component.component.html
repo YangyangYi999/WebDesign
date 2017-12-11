@@ -17,7 +17,10 @@
             <input type="password" class="form-control" id="signinInputPassword" formControlName="password" placeholder="Password">
           </div>
           <div class="center">
-            <button type="submit" class="btn btn-primary btn-lg btn-block" [disabled]="!SigninForm.valid">Sign in</button>
+            <a [routerLink]="['../email']">
+              <button type="submit" class="btn btn-primary btn-lg btn-block" >Sign in</button>
+              <!-- [disabled]="!SigninForm.valid" -->
+            </a>
           </div>
         </form>
       </div>
@@ -48,7 +51,9 @@
           <label for="signinInputPassword">Password</label>
           <input type="password" class="form-control" id="signinInputPassword" placeholder="Password" formControlName="passwordRegister">
         </div>
+        <a [routerLink]="['../email']">
         <button type="submit" class="btn btn-primary btn-lg btn-block" [disabled]="!RegisterForm.valid">Register</button>
+        </a>
       </form>
     </div>
 

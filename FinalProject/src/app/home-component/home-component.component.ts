@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ItemComponentComponent} from '../item-component/item-component.component'
 
 @Component({
   selector: 'app-home-component',

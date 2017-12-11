@@ -26,7 +26,10 @@
           <strong>Phone:</strong>
           <input type="text" name="phone" class="form-control mb-3 mt-3" placeholder="617-345-9654" formControlName="phone" />
         </div>
-        <button type="submit" class="btn btn-primary btn-submit-fix  btn-success  mx-auto btn-lg my-3" [disabled]="!myForm.valid">Continue to pay</button>
+        <a [routerLink]="['../payment']" class="mx-auto my-3">
+        <button type="submit" class="btn btn-primary btn-submit-fix btn-lg btn-success" >Continue to pay</button>
+        <!-- [disabled]="!myForm.valid" -->
+        </a>
       </div>
     </form>
   </div>
