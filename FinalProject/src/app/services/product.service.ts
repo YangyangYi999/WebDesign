@@ -18,14 +18,7 @@ export class ProductService {
   getProducts() {
     return this.http.get<ProductResponse>(this.productsUrl)
                .map(response => {
-                let transformedMessages: Product[] = [];
-                console.log(response);
-                console.log(response.obj);                
-                // for( let product of response.obj) {
-                //     transformedMessages.push(new Product(product.content, 'Dummy', message._id, null));
-                // }
-                console.log(transformedMessages);
-                return transformedMessages;
+                return response.obj as Product[];                
                })
                .catch((error) => Observable.throw(error));
   }

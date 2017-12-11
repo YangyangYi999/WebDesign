@@ -12,6 +12,7 @@ import {ViewOrderComponent} from './view-order/view-order.component'
 import {CheckoutComponentComponent} from './checkout-component/checkout-component.component'
 import {PaymentComponent} from './payment/payment.component'
 import { AccountComponent } from './account-component/account-component.component';
+import { DetailComponent } from './detail/detail.component';
 
 const appRoutes: Routes = [
     { path: '', 
@@ -31,6 +32,22 @@ const appRoutes: Routes = [
     },
     { path: 'payment',
       component: PaymentComponent
+    },
+    {
+      path: ':productType/:productID',
+      component: DetailComponent
+    },
+    {
+      path: 't-shirts',
+      component: ItemComponentComponent
+    },
+    {
+      path: 'dresses',
+      component: ItemComponentComponent
+    },
+    {
+      path: 'jackets',
+      component: ItemComponentComponent
     },
     // { path: 'home', 
     //   component: ItemComponentComponent, 
@@ -79,7 +96,7 @@ const appRoutes: Routes = [
     imports: [ 
         RouterModule.forRoot(
             appRoutes,
-            { enableTracing: true } // <-- debugging purposes only
+            // { enableTracing: true } // <-- debugging purposes only
           ) ],
     exports: [ RouterModule ]
   })
