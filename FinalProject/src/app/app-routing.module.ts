@@ -34,17 +34,9 @@ const appRoutes: Routes = [
       component: PaymentComponent
     },
     {
-      path: ':productType/:productID',
-      component: DetailComponent
+      path: ':filterType',
+      component: ItemComponentComponent,
     },
-    {
-      path: ':productType',
-      component: ItemComponentComponent
-    },
-    // { path: 'home', 
-    //   component: ItemComponentComponent, 
-    //   outlet:'item'
-    // },  
     {
       path: 'account',
       children: [
@@ -67,6 +59,26 @@ const appRoutes: Routes = [
         }
       ]
     },
+    {
+      path: 'products',
+      children: [
+        {
+          path: ':productType',
+          component: ItemComponentComponent
+        },
+        {
+          path: ':productType/:productID',
+          component: DetailComponent
+        },
+      ]
+    },
+    
+    
+    // { path: 'home', 
+    //   component: ItemComponentComponent, 
+    //   outlet:'item'
+    // },  
+    
     // { path: 'account/login', 
     //   component: LoginComponentComponent 
     // },
