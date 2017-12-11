@@ -28,4 +28,12 @@ export class UserAccountService {
       .catch(error => Observable.throw(error));
   }
 
+  logout() {
+    localStorage.clear();
+  }
+
+  isLoggedIn() {
+    return localStorage.getItem('token') !== null;
+  }
+
 }

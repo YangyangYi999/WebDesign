@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {UserAccountService} from '../services/userAccount.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +9,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() {
+  constructor(private userAccountService: UserAccountService, private router: Router) {
   }
 
   ngOnInit() {
@@ -39,6 +41,15 @@ export class HeaderComponent implements OnInit {
 
   onClickBtn() {
     this.btnAnimation = !this.btnAnimation;
+  }
+
+  isLoggedIn() {
+    return this.userAccountService.isLoggedIn();
+  }
+
+  onLogout() {
+    this.userAccountService.logout();
+    this.router.navigate(['/home']);
   }
 
 }
