@@ -28,9 +28,9 @@
                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop <span
                 class="sr-only">(current)</span></a>
               <div class="dropdown-menu" aria-labelledby="dropdown-shop">
-                <a class="dropdown-item text-secondary text-uppercase" href="#">Women's</a>
-                <a class="dropdown-item text-secondary text-uppercase" href="#">Men's</a>
-                <a class="dropdown-item text-secondary text-uppercase" href="#">Kids</a>
+                <a class="dropdown-item text-secondary text-uppercase" [routerLink]="['','t-shirts']">t-shirt</a>
+                <a class="dropdown-item text-secondary text-uppercase" [routerLink]="['','dresses']">dresses</a>
+                <a class="dropdown-item text-secondary text-uppercase" [routerLink]="['','jackets']">jackets</a>
               </div>
             </li>
             <li class="nav-item mr-md-3">
@@ -42,13 +42,13 @@
           </ul>
           <div class="navbar-right">
             <ul class="navbar-nav">
-              <li class="nav-item"><a href="#"
+              <li class="nav-item"><a [routerLink]="['account/login']"
                                       class="nav-link text-uppercase text-center text-md-left"><span>MY ACCOUNT</span><img
                 class="hide-sm-img"
                 src="../../assets/images/icon-account.svg"></a></li>
               <li class="nav-item" (click)="showSearchBar()"><a class="nav-link text-uppercase hide-sm-link"><span>SEARCH</span><img
                 src="../../assets/images/icon-search.svg"></a></li>
-              <li class="nav-item"><a href="#" class="nav-link text-uppercase hide-sm-link"><span>BAG(<span
+              <li class="nav-item"><a [routerLink]="['cart']" class="nav-link text-uppercase hide-sm-link"><span>BAG(<span
                 class="cart-count">0</span>)</span><img src="../../assets/images/icon-bag.svg" alt=""></a></li>
             </ul>
           </div><!-- navbar-right -->

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { ProductService } from '../services/product.service';
+
+import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'app-detail',
@@ -7,9 +11,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
 
-  constructor() { }
+  productID: string;
+
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private service: ProductService
+  ) { }
 
   ngOnInit() {
+    // this.productID = this.route.snapshot.params["productID"]
+    // console.log(this.productID);
+    this.route.paramMap
+    .switchMap((params: ParamMap) => {
+      this.productID = params.get('productID');
+        console.log(this.productID);    
+      return this.productID;
+    });
   }
 
 }
