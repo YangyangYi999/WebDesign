@@ -15,6 +15,6 @@ export class ItemComponentComponent implements OnInit {
   
     ngOnInit(): void {
       this.productService.getProducts()
-        .then(products => this.products = products.slice(0,4));
+        .subscribe(products => this.products = products.slice(0,4));
     }
 }

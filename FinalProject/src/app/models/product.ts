@@ -5,13 +5,25 @@ export class Product {
         public addedTime: Date,
         public type: string,
         public rate?: number,
-        public itemList?: Array<Item>) {}
+        public itemList?: Item) {}
 }
 
-export class Item {
-    constructor(public size: string,
-        public color: string,
-        public url: string,       
-        public quantity?:number,
-        public price?: number){} 
+export interface Item {
+
+    size:{
+        s: Number;
+        m: Number;
+        l: Number;
+        xl: Number;
+    },
+    color: [{
+        url: string;
+        name: string;
+    }],
+    price: {
+        s: Number;
+        m: Number;
+        l: Number;
+        xl: Number;
+    }
 }
