@@ -23,6 +23,16 @@ export class ProductService {
                .catch((error) => Observable.throw(error));
   }
 
+  getType(t: string) {
+    const type = `${t}`;
+    return type;
+    // return this.http.get<ProductResponse>(this.productsUrl)
+    //            .map(response => {
+    //             return response.obj as Product[];                
+    //            })
+    //            .catch((error) => Observable.throw(error));
+  }
+
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only
     return Promise.reject(error.message || error);

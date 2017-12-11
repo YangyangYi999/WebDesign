@@ -28,16 +28,16 @@
                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop <span
                 class="sr-only">(current)</span></a>
               <div class="dropdown-menu" aria-labelledby="dropdown-shop">
-                <a class="dropdown-item text-secondary text-uppercase" [routerLink]="['','t-shirts']">t-shirt</a>
-                <a class="dropdown-item text-secondary text-uppercase" [routerLink]="['','dresses']">dresses</a>
-                <a class="dropdown-item text-secondary text-uppercase" [routerLink]="['','jackets']">jackets</a>
+                <a class="dropdown-item text-secondary text-uppercase" [routerLink]="['products','t-shirts']">t-shirt</a>
+                <a class="dropdown-item text-secondary text-uppercase" [routerLink]="['products','dresses']">dresses</a>
+                <a class="dropdown-item text-secondary text-uppercase" [routerLink]="['products','jackets']">jackets</a>
               </div>
             </li>
             <li class="nav-item mr-md-3">
               <a class="nav-link text-uppercase text-center text-md-left" href="#">New Arrivals</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-uppercase text-center text-md-left" href="#">Best Sellers</a>
+              <a class="nav-link text-uppercase text-center text-md-left"  [routerLink]="['','bestsellers']">Best Sellers</a>
             </li>
           </ul>
           <div class="navbar-right">
