@@ -38,15 +38,7 @@ const appRoutes: Routes = [
       component: DetailComponent
     },
     {
-      path: 't-shirts',
-      component: ItemComponentComponent
-    },
-    {
-      path: 'dresses',
-      component: ItemComponentComponent
-    },
-    {
-      path: 'jackets',
+      path: ':productType',
       component: ItemComponentComponent
     },
     // { path: 'home', 

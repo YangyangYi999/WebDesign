@@ -20,12 +20,14 @@ export class DetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    // this.productID = this.route.snapshot.params["productID"]
+    // console.log(this.productID);
     this.route.paramMap
     .switchMap((params: ParamMap) => {
       this.productID = params.get('productID');
+        console.log(this.productID);    
       return this.productID;
     });
-    console.log(this.productID);    
   }
 
 }

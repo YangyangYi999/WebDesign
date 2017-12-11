@@ -23,13 +23,15 @@ export class ItemComponentComponent implements OnInit {
       private productService: ProductService) { }
   
     ngOnInit(): void {
-      this.route.paramMap
-      .switchMap((params: ParamMap) => params.get('productType'))
-      .subscribe(productType =>
-        {
-          this.type = productType;
-          console.log(this.type);
-        })
+      this.type = this.route.snapshot.params["productType"]
+      console.log(this.type);
+      // this.route.paramMap
+      // .switchMap((params: ParamMap) => params.get('productType'))
+      // .subscribe(productType =>
+      //   {
+      //     this.type = productType;
+      //     console.log(this.type)
+      //   })
 
       this.productService
         .getProducts()
