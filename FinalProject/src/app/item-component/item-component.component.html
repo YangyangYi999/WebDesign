@@ -6,7 +6,7 @@
     <div class="card-block d-flex flex-column" style="flex-grow: inherit">
       <h4 class="card-title">{{product.name}}</h4>
       <p class="card-text mb-5">{{product.description}}</p>
-      <a [routerLink]="['/products', product.type, product._id]" class="mt-auto text-left">
+      <a [routerLink]="['/products', product.type, product._id]" class="mt-auto text-left">                    
         <button class="addtocart" name="addtocart" type="submit" class="btn btn-success center">View details</button>
       </a>
     </div>

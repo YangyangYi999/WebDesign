@@ -9,12 +9,13 @@ import {Router} from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
+  searchResult:string;
+
   constructor(private userAccountService: UserAccountService, private router: Router) {
   }
 
   ngOnInit() {
   }
-
   // noinspection TsLint
   btnAnimation = false;
   // noinspection TsLint

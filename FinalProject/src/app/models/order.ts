@@ -2,7 +2,11 @@ import { Product } from './product'
 
 export class Order {
     constructor(public id: string, 
-        public productList: Array<Product>,        
+        public productList: [{
+            size:string;
+            qty: number;
+            product: Product;
+        }],        
         public orderDate: Date,
         public userAccountID: string,
         public receiverName: string,
