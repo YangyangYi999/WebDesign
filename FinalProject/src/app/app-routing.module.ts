@@ -14,86 +14,96 @@ import {AccountComponent} from './account-component/account-component.component'
 import {DetailComponent} from './detail/detail.component';
 
 const appRoutes: Routes = [
-    { path: '', 
-      redirectTo: '/home', 
-      pathMatch: 'full'
-    },
-    { path: 'home',
-      component: HomeComponentComponent,
-      // outlet: 'home'
-    },  
-    { path: 'cart',
-      component: CartComponent
-    },
-    {
-      path: 'checkout',
-      component: CheckoutComponentComponent,
-    },
-    { path: 'payment',
-      component: PaymentComponent
-    },
-    {
-      path: ':filterType',
-      component: ItemComponentComponent,
-    },
-    {
-      path: 'account',
-      children: [
-        { path: 'login', 
-          component: LoginComponentComponent 
-        },
-        { 
-          // path: '/:email', 
-          path: 'email',
-          component: AccountComponent,
-        },
-        {
-          path: 'orders',
-          component: OrdersComponentComponent
-        },
-        { 
-          // path: '/:orderID',
-          path: 'orderID',
-          component: ViewOrderComponent
-        }
-      ]
-    },
-    {
-      path: 'products',
-      children: [
-        {
-          path: ':productType',
-          component: ItemComponentComponent
-        },
-        {
-          path: ':productType/:productID',
-          component: DetailComponent
-        },
-      ]
-    },
-    
-    
-    // { path: 'home', 
-    //   component: ItemComponentComponent, 
-    //   outlet:'item'
-    // },  
-    
-    // { path: 'account/login', 
-    //   component: LoginComponentComponent 
-    // },
-    // { path: 'account/orders',
-    //   component: OrdersComponentComponent
-    // },
-    { path: '**', 
-      component: PageNotFoundComponent 
-    }
-    // { path: 'hero/:id',      component: HeroDetailComponent },
-    // {
-      // path: 'heroes',
-      // component: HeroListComponent,
-      // data: { title: 'Heroes List' }
-    // },
-  ];
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    component: HomeComponentComponent,
+    // outlet: 'home'
+  },
+  {
+    path: 'search',
+    component: ItemComponentComponent,
+  },
+  {
+    path: 'cart',
+    component: CartComponent
+  },
+  {
+    path: 'checkout',
+    component: CheckoutComponentComponent,
+  },
+  {
+    path: 'payment',
+    component: PaymentComponent
+  },
+  {
+    path: ':filterType',
+    component: ItemComponentComponent,
+  },
+  {
+    path: 'account',
+    children: [
+      {
+        path: 'login',
+        component: LoginComponentComponent
+      },
+      {
+        // path: '/:email',
+        path: 'email',
+        component: AccountComponent,
+      },
+      {
+        path: 'orders',
+        component: OrdersComponentComponent
+      },
+      {
+        // path: '/:orderID',
+        path: 'orderID',
+        component: ViewOrderComponent
+      }
+    ]
+  },
+  {
+    path: 'products',
+    children: [
+      {
+        path: ':productType',
+        component: ItemComponentComponent
+      },
+      {
+        path: ':productType/:productID',
+        component: DetailComponent
+      },
+    ]
+  },
+
+
+  // { path: 'home',
+  //   component: ItemComponentComponent,
+  //   outlet:'item'
+  // },
+
+  // { path: 'account/login',
+  //   component: LoginComponentComponent
+  // },
+  // { path: 'account/orders',
+  //   component: OrdersComponentComponent
+  // },
+  {
+    path: '**',
+    component: PageNotFoundComponent
+  }
+  // { path: 'hero/:id',      component: HeroDetailComponent },
+  // {
+  // path: 'heroes',
+  // component: HeroListComponent,
+  // data: { title: 'Heroes List' }
+  // },
+];
 
 @NgModule({
   imports: [

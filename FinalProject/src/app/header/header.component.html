@@ -66,10 +66,11 @@
       <div class="search-navbar col-12" #searchBar
            *ngIf="searchBarVisible">
         <form class="form-inline my-2 my-lg-0 col-12">
-          <input class="form-control" type="search" placeholder="Search" aria-label="Search" (focus)="changeBorder()"
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search" [(ngModule)]="searchResult" (focus)="changeBorder()"
                  (focusout)="changeBorder()" [ngStyle]="borderBottomStyle()">
-          <button class="navbar-form-button" type="submit" #searchBarBtn [ngStyle]="borderBottomStyle()"><i
-            class="fa fa-search text-secondary" aria-hidden="true"></i></button>
+          <a [routerLink]="['search']"  [queryParams]='{name:searchResult}'>
+          <button class="navbar-form-button" type="submit" #searchBarBtn (click)="search" [ngStyle]="borderBottomStyle()"><i
+            class="fa fa-search text-secondary" aria-hidden="true"></i></button></a>
         </form>
       </div>
     </div><!-- row -->
