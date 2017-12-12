@@ -34,7 +34,7 @@
               </div>
             </li>
             <li class="nav-item mr-md-3">
-              <a class="nav-link text-uppercase text-center text-md-left" href="#">New Arrivals</a>
+              <a class="nav-link text-uppercase text-center text-md-left" [routerLink]="['','newarrivals']">New Arrivals</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-uppercase text-center text-md-left"  [routerLink]="['','bestsellers']">Best Sellers</a>
@@ -68,8 +68,9 @@
         <form class="form-inline my-2 my-lg-0 col-12">
           <input class="form-control" type="search" placeholder="Search" aria-label="Search" (focus)="changeBorder()"
                  (focusout)="changeBorder()" [ngStyle]="borderBottomStyle()">
-          <button class="navbar-form-button" type="submit" #searchBarBtn [ngStyle]="borderBottomStyle()"><i
-            class="fa fa-search text-secondary" aria-hidden="true"></i></button>
+          <a [routerLink]="['search']"  [queryParams]='{name:searchResult}'>
+          <button class="navbar-form-button" type="submit" #searchBarBtn (click)="search" [ngStyle]="borderBottomStyle()"><i
+            class="fa fa-search text-secondary" aria-hidden="true"></i></button></a>
         </form>
       </div>
     </div><!-- row -->

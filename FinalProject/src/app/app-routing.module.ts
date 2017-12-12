@@ -25,6 +25,10 @@ const appRoutes: Routes = [
     // outlet: 'home'
   },
   {
+    path: 'search',
+    component: ItemComponentComponent,
+  },
+  {
     path: 'cart',
     component: CartComponent
   },

@@ -16,21 +16,21 @@ export class ProductService {
   constructor(private http: HttpClient) { }
 
   getProducts() {
-    return this.http.get<ProductResponse>(this.productsUrl)
+    return this.http.get<ProductsResponse>(this.productsUrl)
                .map(response => {
                 return response.obj as Product[];
                })
                .catch((error) => Observable.throw(error));
   }
 
-  getType(t: string) {
-    const type = `${t}`;
-    return type;
-    // return this.http.get<ProductResponse>(this.productsUrl)
-    //            .map(response => {
-    //             return response.obj as Product[];
-    //            })
-    //            .catch((error) => Observable.throw(error));
+  getProduct(id: string) {
+    const url = `${this.productsUrl}/${id}`;
+    console.log(url);
+    return this.http.get<ProductResponse>(url)
+    .map(response => {
+     return response.obj as Product;
+    })
+    .catch((error) => Observable.throw(error));
   }
 
   addProductToCart(product: Product) {
@@ -56,7 +56,12 @@ export class ProductService {
 
 }
 
-interface ProductResponse {
+interface ProductsResponse {
   message: string;
   obj: Array<Product>;
+}
+
+interface ProductResponse {
+  message: string;
+  obj: Product;
 }

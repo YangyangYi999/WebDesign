@@ -5,6 +5,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 import 'rxjs/add/operator/switchMap';
 import { filter } from 'rxjs/operator/filter';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-item-component',
@@ -71,9 +72,20 @@ export class ItemComponentComponent implements OnInit {
                 if(this.filter === "bestsellers"){
                   this.products = [];
                   for(let i=0;i<products.length;i++){
-                    console.log(products[i].rating)
+                    // console.log(products[i].rating)
                     if(products[i].rating === 5)
                       this.products.push(products[i]);
+                  }
+                }
+                if(this.filter === "newarrivals"){
+                  this.products = [];
+                  let currentTime = "2017-12-30";
+                  for(let i=0;i<products.length;i++){
+                    // console.log(products[i].rating)
+                    if(moment(products[i].addedTime).isAfter(currentTime, 'day')!== true){ // false
+                      this.products.push(products[i]);
+                      console.log(currentTime+products[i].addedTime);
+                    }
                   }
                 }
               })
