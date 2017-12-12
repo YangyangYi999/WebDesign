@@ -35,17 +35,9 @@ router.get('/:id', function (req, res, next) {
                 error: {message: "Product not found"}
             });
         }
-        product.save(function (err, result) {
-            if (err) {
-                return res.status(500).json({
-                    title: 'An error occurred',
-                    error: err
-                });
-            }
-            res.status(200).json({
-                message: 'Product Found',
-                obj: result
-            });
+        res.status(200).json({
+            message: 'Product Found',
+            obj: result
         });
     });
 });

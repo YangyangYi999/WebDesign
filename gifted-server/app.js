@@ -22,6 +22,7 @@ let productModel = require('./models/product'),
 
 // Initialize Routes
 
+let cartRoutes = require('./routes/cart');
 let userRoutes = require('./routes/user');
 let productRoutes = require('./routes/product');
 let appRoutes = require('./routes/app');
@@ -45,6 +46,7 @@ app.use(function (req, res, next) {
 
 // Set Routes
 
+app.use('/cart', cartRoutes);
 app.use('/user', userRoutes);
 app.use('/products', productRoutes);
 app.use('/', appRoutes);

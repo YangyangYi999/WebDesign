@@ -28,7 +28,7 @@ export class UserAccountService {
       .catch(error => Observable.throw(error));
   }
 
-  logout() {
+  logOut() {
     localStorage.clear();
   }
 

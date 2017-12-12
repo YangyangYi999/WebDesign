@@ -8,6 +8,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
+    "compodoc": "./node_modules/.bin/compodoc -p tsconfig.json",
     "e2e": "ng e2e"
   },
   "private": true,
@@ -41,6 +42,7 @@
     "@types/jquery": "^3.2.16",
     "@types/node": "~6.0.60",
     "codelyzer": "~3.2.0",
+    "compodoc": "0.0.41",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "karma": "~1.7.0",
