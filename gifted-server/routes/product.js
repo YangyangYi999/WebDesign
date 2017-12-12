@@ -21,7 +21,7 @@ router.get('/', function (req, res ,next) {
         });
 });
 
-router.patch('/:id', function (req, res, next) {
+router.get('/:id', function (req, res, next) {
     Product.findById(req.params.id, function (err, product) {
         if (err) {
             return res.status(500).json({
@@ -35,7 +35,6 @@ router.patch('/:id', function (req, res, next) {
                 error: {message: "Product not found"}
             });
         }
-        product.content = req.body.content;
         product.save(function (err, result) {
             if (err) {
                 return res.status(500).json({
@@ -44,7 +43,7 @@ router.patch('/:id', function (req, res, next) {
                 });
             }
             res.status(200).json({
-                message: 'Updated Product',
+                message: 'Product Found',
                 obj: result
             });
         });
